@@ -1,0 +1,54 @@
+﻿<div style="margin-left:30px; width:400px;">
+    <h3>Edit Player</h3>
+    {{message}}
+
+    <form name="UpdatePlayerForm" ng-submit="UpdatePlayer();" class="form-group">
+        <div class="form-group">
+            <label for="player.Name">Name</label>
+            <input type="text" class="form-control" ng-model="playerParam.Name" required />
+        </div>
+        <div class="form-group">
+            <label for="player.Clubs_ClubId">Club</label>
+            <select class="form-control" ng-model="playerParam.Club_Id">
+                <option data-ng-repeat="club in listClubs" value="{{club.ClubId}}">{{club.Name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="player.Country">Country</label>
+            <input type="text" class="form-control" ng-model="playerParam.Country" required />
+        </div>
+        <div class="form-group">
+            <label for="player.Age">Age</label>
+            <input type="text" class="form-control" ng-model="playerParam.Age" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Update"/>
+        </div>
+    </form>
+    <!--<form name="EditPlayerForm" ng-submit="UpdatePlayer();">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" ng-model="player.Name" /></td>
+            </tr>
+            <tr>
+                <td>Club</td>
+                <td><input type="text" ng-model="player.Club" /></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" ng-model="player.Country" /></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="text" ng-model="player.Age" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>-->
+
+    <br />
+    <a href="#/" class="btn btn-primary">Main Page</a>
+</div>

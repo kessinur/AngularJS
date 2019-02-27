@@ -1,0 +1,22 @@
+﻿<div style="margin-left:30px; width:500px;">
+    <h3>List of Clubs</h3>
+    {{message}}
+
+    <br />
+    <a href="#/AddClub" class="btn btn-primary">Add Club</a>
+    <table class="table table-bordered">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="club in listClubs">
+            <td>{{$index+1}}</td>
+            <td>{{club.Name}}</td>
+            <td><a href="#/EditClub/{{club.ClubId}}">Edit</a></td>
+            <td><a href="#/" ng-click="DeleteClub(club.ClubId,$index)">Delete</a></td>
+        </tr>
+    </table>
+
+</div>

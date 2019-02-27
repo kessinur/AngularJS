@@ -1,0 +1,39 @@
+﻿<div style="margin-left:30px; width:400px;">
+    <h3>Add Club</h3>
+    {{message}}
+
+    <form name="AddClubForm" ng-submit="AddClub();" class="form-group">
+        <div class="form-group">
+            <label for="club.Name">Name</label>
+            <input type="text" class="form-control" ng-model="club.Name" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Submit" />
+        </div>
+        <!--<table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" ng-model="club.Name" /></td>
+            </tr>
+            <tr>
+                <td>Club</td>
+                <td><input type="text" ng-model="club.Club" /></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" ng-model="club.Country" /></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="text" ng-model="club.Age" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>-->
+    </form>
+
+    <br />
+    <a href="#/" class="btn btn-primary">Main Page</a>
+
+</div>

@@ -39,9 +39,10 @@ controller("MainController", function($scope, PlayerService){
             $scope.listClubs = x.data.list;
         })
 
-        $scope.UpdatePlayer = function()
+        $scope.EditPlayer = function()
         {
-            PlayerService.UpdatePlayer($scope.playerParam);
+            console.log($scope.playerParam);
+            PlayerService.EditPlayer($scope.playerParam);
         }
     }).
 factory("PlayerService", ["$http", function ($http) {
@@ -67,8 +68,8 @@ factory("PlayerService", ["$http", function ($http) {
         })
     }
 
-    fac.UpdatePlayer = function (playerParam) {
-        $http.post("/Player/UpdatePlayer", playerParam).success(function (response) {
+    fac.EditPlayer = function (playerParam) {
+        $http.post("/Player/EditPlayer", playerParam).success(function (response) {
             alert(response.status);
         })
     }

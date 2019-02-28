@@ -7,6 +7,7 @@ namespace AngularASPNET.Param
 {
     public class PlayerParam
     {
+        public int PlayerId { get; set; }
         public string Name { get; set; }
         public string Country { get; set; }
         public int Age { get; set; }
